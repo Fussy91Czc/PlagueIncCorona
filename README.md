@@ -64,3 +64,65 @@ Enter the your passphrase behind the text "Enter passphrase".
 Click on the button "OK".
 
 Stake can only be generated when you have coins in your wallet.
+
+-------------------------------------------------------------------------------------------------------------
+
+Tutorial - Mine for blocks with macOS
+Mine for blocks with your macOS wallet and the following instructions.
+
+Open Spotlight Search and type the following:
+
+terminal
+
+Click on terminal.
+
+Execute the following command, to open your downloads directory:
+
+cd Downloads
+
+Install Homebrew with the following command:
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+Enter your sudo password to install Homebrew.
+
+Install wget with the following command:
+
+brew install wget
+
+Download your macOS wallet with the following command:
+
+wget "https://dl.walletbuilders.com/download?customer=9767fabadde6c6001786a05ea8155ffea9e3be26a7e6820ea1&filename=plagueinccorona-qt.dmg" -O plagueinccorona-qt.dmg
+
+Create the data directory for your coin with the following command:
+
+mkdir "$HOME/Library/Application Support/PlagueIncCorona/"
+
+Open nano.
+
+nano "$HOME/Library/Application Support/PlagueIncCorona/plagueinccorona.conf" -t
+
+Paste the following into nano.
+
+rpcuser=rpc_plagueinccorona
+rpcpassword=dR2oBQ3K1zYMZQtJFZeAerhWxaJ5Lqeq9J2
+rpcallowip=127.0.0.1
+listen=1
+server=1
+addnode=node1.walletbuilders.com
+
+Save the file with the keyboard shortcut ctrl + x.
+
+Open your downloads directory in Finder.
+
+Install your macOS wallet with the file plagueinccorona-qt.dmg.
+
+Open your wallet.
+
+Go to Tools -> Debug console
+This is the console where you execute RPC commands.
+
+Type the following command, to mine your first block:
+
+setgenerate true -1
+
