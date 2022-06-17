@@ -90,9 +90,7 @@ Install wget with the following command:
 
 brew install wget
 
-Download your macOS wallet with the following command:
-
-wget plagueinccorona-qt.dmg -O plagueinccorona-qt.dmg
+Download your macOS wallet  plagueinccorona-qt.dmg 
 
 Create the data directory for your coin with the following command:
 
